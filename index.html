@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+
+    <button class="allTasks-btn" type="button">All Tasks</button>
+
+    <div class="all-assigner-buttons">
+      <button class="assigner-btn" data-assigner="user1" type="button">user1</button>
+      <button class="assigner-btn" data-assigner="user2" type="button">user2</button>
+      <button class="assigner-btn" data-assigner="user3" type="button">user3</button>
+      <button class="assigner-btn" data-assigner="user4" type="button">user4</button>
+    </div>
+
+    <div class="row">
+      <form class="form" action="">
+        <div class="input-row">
+          <label>Task name</label>
+          <input type="text" name="name" />
+        </div>
+
+        <div class="input-row">
+          <label>Story Point</label>
+          <input type="number" name="story-point" />
+        </div>
+
+        <div class="input-row">
+          <label>Assigner</label>
+          <select name="assigner">
+            <option data-assigner="user1" value="user1">user1</option>
+            <option data-assigner="user2" value="user2">user2</option>
+            <option data-assigner="user3" value="user3">user3</option>
+            <option data-assigner="user4" value="user4">user4</option>
+          </select>
+        </div>
+
+        <div class="input-row stage-row hide">
+          <label>Stage</label>
+          <select name="stage">
+            <option value="TODO">Todo</option>
+            <option value="IN_PROGRESS">In progress</option>
+            <option value="DONE">Done</option>
+          </select>
+        </div>
+        <div class="btns">
+          <button type="submit">Add Task</button>
+          <button type="button" class="update-btn hide">Update Task</button>
+        </div>
+      </form>
+
+      <div class="tasks">
+        <div class="task-section new-text">
+          <div class="todo">
+            <h2>Todo</h2>
+            <div
+              class="todo-container element-container"
+              data-name="TODO"
+            ></div>
+          </div>
+          <div class="inprogress">
+            <h2>In progress</h2>
+            <div
+              class="inprogress-container element-container"
+              data-name="IN_PROGRESS"
+            ></div>
+          </div>
+          <div class="done">
+            <h2>Done</h2>
+            <div
+              class="done-container element-container"
+              data-name="DONE"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
